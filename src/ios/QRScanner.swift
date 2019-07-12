@@ -232,8 +232,8 @@ class QRScanner : CDVPlugin, AVCaptureMetadataOutputObjectsDelegate {
     }
 
     // This method processes metadataObjects captured by iOS.
-    func metadataOutput(_ captureOutput: AVCaptureMetadataOutput!, didOutputMetadataObjects metadataObjects: [Any]!, from connection: AVCaptureConnection!) {
-        if metadataObjects == nil || metadataObjects.count == 0 || scanning == false {
+    func metadataOutput(_ captureOutput: AVCaptureMetadataOutput, didOutput metadataObjects: [AVMetadataObject], from connection: AVCaptureConnection) {
+        if metadataObjects.count == 0 || scanning == false {
             // while nothing is detected, or if scanning is false, do nothing.
             return
         }
