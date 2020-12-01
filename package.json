@@ -25,7 +25,11 @@
     "test:library": "npm run build && node tests/library/test.js",
     "changelog": "conventional-changelog -p angular -i CHANGELOG.md -s",
     "commitmsg": "validate-commit-msg",
-    "prep-release": "git clean -dfx && npm install && npm run build && npm run changelog"
+    "prep-release": "git clean -dfx && npm install && npm run build && npm run changelog",
+    "preinstall": "npx npm-force-resolutions"
+  },
+  "resolutions": {
+    "graceful-fs": "^4.2.4"
   },
   "repository": {
     "type": "git",
@@ -62,7 +66,7 @@
     "conventional-changelog-cli": "^1.2.0",
     "cz-conventional-changelog": "^2.0.0",
     "express": "^4.14.0",
-    "gulp": "^4.0.1",
+    "gulp": "^3.9.1",
     "gulp-insert": "^0.5.0",
     "husky": "^0.13.1",
     "jshint": "^2.9.2",
