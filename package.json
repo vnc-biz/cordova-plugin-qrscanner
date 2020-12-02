@@ -27,6 +27,9 @@
     "commitmsg": "validate-commit-msg",
     "prep-release": "git clean -dfx && npm install && npm run build && npm run changelog"
   },
+  "resolutions": {
+    "graceful-fs": "^4.2.4"
+  },
   "repository": {
     "type": "git",
     "url": "https://github.com/bitpay/cordova-plugin-qrscanner"
